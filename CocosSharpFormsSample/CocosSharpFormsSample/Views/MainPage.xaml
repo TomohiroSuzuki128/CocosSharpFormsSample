@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+			 prism:ViewModelLocator.AutowireViewModel="True"
+			 Title="ココ寿司ャープ"
+			 x:Class="CocosSharpFormsSample.Views.MainPage">
+	<Grid x:Name="MainGrid" RowSpacing="0">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<StackLayout Grid.Column="0" Grid.Row="1">
+			<StackLayout Padding="0,100,0,0">
+				<Button Text="左へ寿司を流す" Command="{Binding LeftCommand}" />
+			</StackLayout>
+			<StackLayout Padding="0,20,0,0">
+				<Button Text="右へ寿司を流す" Command="{Binding RightCommand}" />
+			</StackLayout>
+		</StackLayout>
+	</Grid>
+</ContentPage>
